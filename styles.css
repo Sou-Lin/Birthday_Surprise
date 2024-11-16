@@ -1,0 +1,118 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url('banner.HEIC') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.hero-section .text-container {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0);
+    position: relative;
+    top: -50px; /* Adjust for positioning */
+    text-align: center;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+.lyrics-section {
+    background: url('song.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Keeps the background fixed */
+    padding: 40px;
+    text-align: center;
+    color: #fff; /* Text color remains the same */
+}
+
+.lyrics-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.lyrics-section p {
+    font-size: 1.2rem;
+    line-height: 1.2; /* Decreased line height for less spacing between lines */
+    white-space: pre-wrap;
+    text-align: left; /* Align the text to the left */
+    margin-left: 20px; /* Optional: add some space from the left edge */
+    margin-right: 20px; /* Optional: add some space from the right edge */
+}
+
+.footer {
+    background: #16a085;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Position the button at the lower right corner */
+#toggleButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: none; /* Initially hidden, shown when the page is loaded or on some interaction */
+    border-radius: 50%; /* Full circle */
+    width: 100px; /* Set the width of the button */
+    height: 100px; /* Set the height of the button */
+    background-color: red; /* Red background for the Play button */
+    border: none; /* Remove border */
+    font-size: 20px; /* Font size for labels */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the text inside the circle */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for button */
+#toggleButton:hover {
+    background-color: #ff5c5c; /* Darker red on hover */
+}
+
+/* When the button is in "Paused" state */
+#toggleButton.paused {
+    background-color: #e74c3c; /* Red for Pause */
+}
+
+/* When the button is in "Playing" state */
+#toggleButton.playing {
+    background-color: #16a085; /* Green for Play */
+}
+
+/* When the button is in "Resume" state */
+#toggleButton.resume {
+    background-color: #f39c12; /* Yellow for Resume */
+}
+
+/* Adjust button text size */
+#toggleButton span {
+    font-weight: bold;
+    font-size: 16px;
+}
+
